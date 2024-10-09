@@ -52,7 +52,13 @@ This application allows you to create a workout sequence based off of your curre
 - 
 
 ## Wireframes
- link to be added 
+![image](https://github.com/user-attachments/assets/7add3c3b-886b-4e3d-a016-c8df6efb5a25)
+
 ## Digital Wireframes & Mockups 
-to be added 
+![image](https://github.com/user-attachments/assets/d8f94a14-8e3e-4e2d-9fa8-7f9505346d4b)
+![image](https://github.com/user-attachments/assets/14625fe5-17fd-4d10-a55c-c70a30f1318d)
+![image](https://github.com/user-attachments/assets/45bacc1d-23f2-4c0e-bdde-378fff99cc1e)
+
+
 ## Interactive Prototype (Bonus)
+![Wireframe_Prototype-1](https://github.com/user-attachments/assets/597fdb8b-c49e-4089-87b1-9d157b30c8ab)
