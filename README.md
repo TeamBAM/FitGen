@@ -49,6 +49,8 @@ This application allows you to create a workout sequence based off of your curre
 - Profile Page
 
 **Flow Navigation** (Screen to Screen)
+- Sign-in -> Sign up -> Log in verification -> Fitness Plan -> Fitness Plan Creation -> Main App
+- Sign-in -> Main App
 - 
 
 ## Wireframes
