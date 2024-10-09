@@ -6,11 +6,11 @@
 ## Overview 
 This application allows you to create a workout sequence based off of your current exercise equipment and resources. It can also create a routine based off of demographic information entered into the app.
 ## **App Evaluation**
-- Category: Health/Fitness
-- story: Create at home fitness routine based off of information input from the user
-- Market: The target audience are people who is interested in starting a fitness journey or is into their journey and needs assistance with creating a team. However, any individual can utilize our app. (to be discussed)
-- Habit: How often the app is used will be up to the user depending on where they are in their fitness journey and how consistent they want to be.
-- Scope: We are strictly focused on providing routines for those who are in need a routine and can't thing of one. Once this is complete, we may venture into....
+- **Category**: Health/Fitness
+- **story**: Create at home fitness routine based off of information input from the user
+- **Market**: The target audience are people who is interested in starting a fitness journey or is into their journey and needs assistance with creating a team. However, any individual can utilize our app. (to be discussed)
+- **Habit**: How often the app is used will be up to the user depending on where they are in their fitness journey and how consistent they want to be.
+- **Scope**: We are strictly focused on providing routines for those who are in need a routine and can't thing of one. Once this is complete, we may venture into....
 ## Product Spec
 ## 1. User Stories (Required & Optional)
 ### Required
@@ -40,7 +40,15 @@ This application allows you to create a workout sequence based off of your curre
 - Profile
      - 
 ## 4. Navigation
-   - 
+**Tab Navigvation** (Tab to Screen)
+- Fitness Plan
+- Progress
+- Exercise Log
+- Profile Page
+
+**Flow Navigation** (Screen to Screen)
+- 
+
 ## Wireframes
  link to be added 
 ## Digital Wireframes & Mockups 
