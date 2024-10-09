@@ -27,12 +27,14 @@ This application allows you to create a workout sequence based off of your curre
  - Use maps to track your running path
 ## 3. Screens
 - Login
-- Register: User signs in
-- Demographic Information
+- Register: User signs up or logs into their account
+  - 
+- Demographic Information: User enters information in
+  - 
 - Body Composition Goals
 - Fitness Goals
 - Confirmation Page
-      - Confirms training plan and displays the name. The "learn more" link is for a desciption of each plan type.
+  - Confirms training plan and displays the name. The "learn more" link is for a desciption of each plan type.
 -  Fitness Plan
       - Displays the date, body area of focus & link to view routine
 - Progress Page
