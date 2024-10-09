@@ -1,52 +1,55 @@
 # FitGen
-## Table of contents
+## Table of Contents
 1. Overview
 2. Product Specs
 3. Wireframes
+   
 ## Overview 
-This application creates a workout routine based off of demographic information entered into the app by the user. It constructs a specialized routine targeting body areas of focus and displays the user's fitness plans, progress and exercise logs. 
+This application creates a workout routine based off of demographic information entered by the user. It constructs a specialized routine targeting body areas of focus and displays the user's fitness plans, progress and exercise logs. 
+
 ## **App Evaluation**
 - **Category**: Health/Fitness
-- **story**: Create at home fitness routine based off of information input from the user
-- **Market**: The target audience are people who is interested in starting a fitness journey or is into their journey and needs assistance with creating a team. However, any individual can utilize our app. (to be discussed)
+- **Story**: Create at home fitness routine based off of information input from the user
+- **Market**: The target audience are people who are interested in starting a fitness journey or are into their journey and need assistance with creating a routine. This in mind, any individual can utilize our app. 
 - **Habit**: How often the app is used will be up to the user depending on where they are in their fitness journey and how consistent they want to be.
-- **Scope**: We are strictly focused on providing routines for those who are in need a routine and can't think of one. Once this is complete, we may venture into.. 
-## Product Spec
+- **Scope**: We are strictly focused on providing routines for those who are in need a routine and can't think of one. Once this is complete, we may venture into adding features where you can connect with friends and see their fitness stats as well. We would also incorporate weekly challenges as well as track daily steps and calorie intake.
+  
+# Product Spec
 ## 1. User Stories (Required & Optional)
 ### Required
-- User can log in to & create profile page on FitGen
-- User must enter demographic information and fitness goals
-- Showcases fitness plan, progress and Exercise logs
-- Create & modify activites based on sign-in/survey information
-- Settings to make updates/changes (General, Notifications, etc.)
+- User can log into & create profile page on FitGen.
+- User must enter demographic information and fitness goals.
+- Showcases fitness plan, progress and Exercise logs.
+- Create & modify activites based on sign-in/survey information.
+- Settings to make updates/changes (General, Notifications, etc.).
 ### Optional (nice-to-have stories)
-- Track daily steps
-- Measure calorie intake based on logged data
-- Friends: connect and see each others stats 
-- Weekly challenges based on fitness plan
-- Use maps to track your running path
-## 3. Screens
+- Track daily steps.
+- Measure calorie intake based on logged data.
+- Friends: connect and see each others stats.
+- Weekly challenges based on fitness plan.
+- Use maps to track your running path.
+## 2. Screens
 - Login
 - Register: User signs up or logs into their account
   - First name, Last name, Email, Passwords, etc.
 - Demographic Information: User inputs personal information
-  - Age, weight, gender, height, 
+  - Age, weight, gender, height.
 - Body Composition Goals: User sets body composition goals
-  - 
+  - Target Weight, Goal Fitness Level, Body Fat% (optional).
 - Fitness Goals: User selects fitness objectives
-  - 
+  - Endurance, Speed, Strength, Flexibility.
 - Confirmation Page: Displays summary of choices
   - Confirms training plan, body comp. goals and displays the name of plan. The "learn more" link is for a desciption of each plan type.
--  Fitness Plan: Shows customized training schedule
+- Fitness Plan: Shows customized training schedule
   - Displays the date, target body areas & link to view routine.
 - Progress Page
   - A summary of the user's progress over time with visual indicators such as charts or metrics showing improvement in fitness.
 - Exercise Log:
- - Allows the user to log specific exercises completed each day with details such as sets, reps, weight used, and time spent.
+  - Allows the user to log specific exercises completed each day with details such as sets, reps, weight used, and time spent.
 - Profile Page: Displays user information and settings
      - Displays user information, goals, and a summary of fitness activity. Allows updates to profile and personal preferences. The user can also access the setting within this page
  
-## 4. Navigation
+## 3. Navigation
 **Tab Navigvation** (Tab to Screen)
 - Fitness Plan
 - Progress
