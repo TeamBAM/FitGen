@@ -3,7 +3,7 @@
 1. Overview
 2. Product Specs
 3. Wireframes
-   
+4. Schema   
 ## Overview 
 This application creates a workout routine based off of demographic information entered by the user. It constructs a specialized routine targeting body areas of focus and displays the user's fitness plans, progress and exercise logs. 
 
@@ -70,3 +70,68 @@ This application creates a workout routine based off of demographic information 
 
 ## Interactive Prototype (Bonus)
 ![Wireframe_Prototype-1](https://github.com/user-attachments/assets/597fdb8b-c49e-4089-87b1-9d157b30c8ab)
+
+## Schema
+### Models
+**Users**
+| Property | Type      | Description |
+|----------|-----------|-------------|
+|firstName | String    |             |
+|lastName  | String    |             |
+|email     | String    |             |
+|createdAt | timestamp |             |
+|updatedAt | timestamp |             |
+|age       | number    |             |
+|height    | number    |             |
+
+**FitStats**
+| Property| Type      | Description |
+|---------|-----------|-------------|
+|userId   | reference |             |
+|weight   | number    |             |
+|bodyFat  | number    |             |
+|fitLevel | string    |             |
+|goals    | string    |             |
+|planName | string    |             |
+|createdAt| timestamp |             |
+|updatedAt| timestamp |             |
+
+**WeighIns**
+| Property| Type      | Description |
+|---------|-----------|-------------|
+|userId   | reference |             |
+|weighDate| timestamp |             |
+|weight   | number    |             |
+|bodyFat  | timestamp |             |
+
+**Exercises**
+| Property   | Type      | Description |
+|------------|-----------|-------------|
+|userId      | reference |             |
+|exerciseName| String    |             |
+|Duration    | number    |             |
+|Reps        | number    |             |
+|Date        | timestamp |             |
+
+### Networking
+List of networking requests by screen
+- Sign In
+   - (Read/GET) Check user sign in information
+   - (Update/PUT) Update password if the user forgot it
+- Sign Up
+   - (Create/POST) Create user account
+   - (Create/POST) Create user fitness profile
+- Profile
+   - (Update/PUT) Update plan/ account info
+   - (DELETE) Delete account
+- Exercise Log
+   - (Read/GET) Get exercises that have been logged
+   - (Update/PUT) User can edit exercise log
+   - (DELETE) User can delete exercise
+   - (Create/POST) User can add exercise to log
+- Progress
+   - (Read/GET) User gets weigh ins displayed as a timeline
+   - (Update/PUT) User can edit a weigh in
+   - (DELETE) User can delete a weigh in
+   - (Create/POST) User can log a new weigh in 
+
