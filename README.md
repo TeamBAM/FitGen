@@ -72,46 +72,47 @@ This application creates a workout routine based off of demographic information 
 ![Wireframe_Prototype-1](https://github.com/user-attachments/assets/597fdb8b-c49e-4089-87b1-9d157b30c8ab)
 
 ## Schema
-### Models
+### Models 
+
 **Users**
-| Property | Type      | Description |
-|----------|-----------|-------------|
-|firstName | String    |             |
-|lastName  | String    |             |
-|email     | String    |             |
-|createdAt | timestamp |             |
-|updatedAt | timestamp |             |
-|age       | number    |             |
-|height    | number    |             |
+| Property  | Type      | Description                                       |
+|-----------|-----------|---------------------------------------------------|
+| firstName | String    | The user's first name.                            |
+| lastName  | String    | The user's last name.                             |
+| email     | String    | The user's email, used for login.                 |
+| createdAt | timestamp | The date and time when the user was created.      |
+| updatedAt | timestamp | The date and time when the user was last updated. |
+| age       | number    | The user's age.                                   |
+| height    | number    | The user's height in centimeters.                 |
 
 **FitStats**
-| Property| Type      | Description |
-|---------|-----------|-------------|
-|userId   | reference |             |
-|weight   | number    |             |
-|bodyFat  | number    |             |
-|fitLevel | string    |             |
-|goals    | string    |             |
-|planName | string    |             |
-|createdAt| timestamp |             |
-|updatedAt| timestamp |             |
+| Property | Type      | Description                                            |
+|----------|-----------|--------------------------------------------------------|
+| userId   | reference | References the user this fit stat belongs to.          |
+| weight   | number    | The user's current weight.                             |
+| bodyFat  | number    | The user's current body fat percentage.                |
+| fitLevel | string    | The user's fitness level                               |
+| goals    | string    | The user's fitness goals                               |
+| planName | string    | The name of the fitness plan assigned to the user.     |
+| createdAt| timestamp | The date and time the fitness stats were created.      |
+| updatedAt| timestamp | The date and time the fitness stats were last updated. |
 
 **WeighIns**
-| Property| Type      | Description |
-|---------|-----------|-------------|
-|userId   | reference |             |
-|weighDate| timestamp |             |
-|weight   | number    |             |
-|bodyFat  | timestamp |             |
+| Property  | Type      | Description                                           |
+|-----------|-----------|-------------------------------------------------------|
+| userId    | reference | References the user this weigh-in belongs to.         |
+| weighDate | timestamp | The date and time of the weigh-in.                    |
+| weight    | number    | The weight recorded during the weigh-in.              |
+| bodyFat   | number    | The body fat percentage recorded during the weigh-in. |
 
 **Exercises**
-| Property   | Type      | Description |
-|------------|-----------|-------------|
-|userId      | reference |             |
-|exerciseName| String    |             |
-|Duration    | number    |             |
-|Reps        | number    |             |
-|Date        | timestamp |             |
+| Property      | Type      | Description                                    |
+|---------------|-----------|------------------------------------------------|
+| userId        | reference | References the user who completed the exercise.|
+| exerciseName  | String    | The name of the exercise                       |
+| Duration      | number    | The duration of the exercise in minutes.       |
+| Reps          | number    | The number of repetitions performed.           |
+| Date          | timestamp | The date and time the exercise was logged.     |
 
 ### Networking
 List of networking requests by screen
