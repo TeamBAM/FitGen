@@ -136,3 +136,5 @@ List of networking requests by screen
    - (DELETE) User can delete a weigh in
    - (Create/POST) User can log a new weigh in 
 
+### Progress Added 
+![Alt Text](relative/path/to/your.gif)
