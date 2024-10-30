@@ -139,4 +139,5 @@ List of networking requests by screen
 ### Progress Added 
 ![Alt Text](relative/path/to/your.gif)
 ![image](https://github.com/user-attachments/assets/93f6d9b2-7f28-4a3f-ae4c-7e331ef2ca6b)
+Updated Database
 ![Alt Text](https://github.com/TeamBAM/FitGen/blob/main/98gm9m.gif?raw=true)
