@@ -1,5 +1,6 @@
 package edu.famu.fitgen.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.google.cloud.firestore.annotation.DocumentId;
 import com.google.firebase.database.annotations.Nullable;
 import com.google.protobuf.TextFormat;
@@ -21,17 +22,18 @@ public class Users {
     private String lastName;
     private String email;
 
+    @JsonFormat
     private Timestamp createdAt ;
     private Timestamp updatedAt;
 
     private int age;
     private int height;
 
-    public void setCreatedAt(String createdAt) throws TextFormat.ParseException, ParseException {
+    public void setCreatedAt(String createdAt) throws ParseException {
         this.createdAt = Timestamp.fromProto(Timestamps.parse(createdAt));
     }
 
-    public void setUpdatedAt(String updatedAt) throws TextFormat.ParseException, ParseException {
+    public void setUpdatedAt(String updatedAt) throws ParseException {
         this.updatedAt = Timestamp.fromProto(Timestamps.parse(updatedAt));
     }
 }

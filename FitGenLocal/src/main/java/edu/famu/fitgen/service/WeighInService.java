@@ -1,43 +1,58 @@
-package edu.famu.fitgen.service;
+/*package edu.famu.fitgen.service;
 
 import com.google.api.core.ApiFuture;
-import com.google.cloud.firestore.DocumentReference;
-import com.google.cloud.firestore.DocumentSnapshot;
-import com.google.firestore.v1.WriteResult;
+import com.google.cloud.firestore.*;
+import com.google.firebase.cloud.FirestoreClient;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 import edu.famu.fitgen.model.WeighIns;
 
 public class WeighInService {
-/*
-    public WeighIns getWeighInById(String id) throws ExecutionException, InterruptedException {
-        DocumentReference weighInDoc = firestore.collection("WeighIns").document(id);
-        ApiFuture<DocumentSnapshot> future = weighInDoc.get();
-        DocumentSnapshot document = future.get();
+    private Firestore firestore;
 
-        if (document.exists()) {
-            return document.toObject(WeighIns.class);
-        } else {
-            throw new RuntimeException("Weigh-In with ID " + id + " not found.");
-        }
+    public WeighInService() {
+        this.firestore = FirestoreClient.getFirestore();
     }
 
+    public WeighIns documentSnapshotToWeighIn(DocumentSnapshot document) {
+        if (document.exists()) {
+            return document.toObject(WeighIns.class);
+        }
+        return null;
+    }
+
+    // Create WeighIn
     public String createWeighIn(WeighIns weighIn) throws ExecutionException, InterruptedException {
-        CollectionReference weighInsCollection = firestore.collection("WeighIns");
-        ApiFuture<DocumentReference> future = weighInsCollection.add(weighIn);
+        CollectionReference weighInCollection = firestore.collection("WeighIns");
+        ApiFuture<DocumentReference> future = weighInCollection.add(weighIn);
         DocumentReference docRef = future.get();
         return docRef.getId();
     }
 
+    // Read WeighIn by ID
+    public WeighIns getWeighIn(String id) throws ExecutionException, InterruptedException {
+        DocumentReference weighInDoc = firestore.collection("WeighIns").document(id);
+        DocumentSnapshot document = weighInDoc.get().get();
+        if (document.exists()) {
+            return document.toObject(WeighIns.class);
+        }
+        return null;
+    }
+
     public WriteResult updateWeighIn(String id, Map<String, Object> updateValues) throws ExecutionException, InterruptedException {
-        String[] notAllowed = {"userId", "weighDate"};
-        List<String> restrictedFields = Arrays.asList(notAllowed);
+        String[] allowed = {"weight", "bodyFat", "updatedAt"};
+
+        List<String> allowedFields = Arrays.asList(allowed);
         Map<String, Object> formattedValues = new HashMap<>();
 
         for(Map.Entry<String, Object> entry : updateValues.entrySet()) {
             String key = entry.getKey();
-            if(!restrictedFields.contains(key)) {
+            if(allowedFields.contains(key)) {
                 formattedValues.put(key, entry.getValue());
             }
         }
@@ -46,12 +61,9 @@ public class WeighInService {
         return result.get();
     }
 
-    public com.google.cloud.firestore.WriteResult deleteWeighIn(String id) throws ExecutionException, InterruptedException {
-        DocumentReference weighInRef = firestore.collection("WeighIns").document(id);
-        return weighInRef.delete().get();
+    public WriteResult deleteWeighIn(String id) throws ExecutionException, InterruptedException {
+        DocumentReference weighInDoc = firestore.collection("WeighIns").document(id);
+        ApiFuture<WriteResult> writeResult = weighInDoc.delete();
+        return writeResult.get();
     }
-
-
-*/
-
-}
+}*/

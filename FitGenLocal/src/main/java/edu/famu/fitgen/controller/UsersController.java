@@ -1,5 +1,6 @@
 package edu.famu.fitgen.controller;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.google.cloud.firestore.WriteResult;
 import edu.famu.fitgen.model.Users;
 import edu.famu.fitgen.service.UsersService;
@@ -13,7 +14,9 @@ import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/api/users")
+@JsonSerialize
+
 public class UsersController {
 
     private final UsersService usersService;
@@ -23,22 +26,23 @@ public class UsersController {
         this.usersService = usersService;
     }
 
-    // Create User (POST)
-    @PostMapping(consumes = Utility.DEFAULT_MEDIA_TYPE, produces = Utility.DEFAULT_MEDIA_TYPE)
+    @PostMapping("/{userId}")
     public ResponseEntity<ApiResponse<String>> addUser(@RequestBody Users user) {
-        try {
+        try{
             String id = usersService.createUser(user);
             return ResponseEntity.status(HttpStatus.CREATED)
                     .body(new ApiResponse<>(true, "User successfully created.", id, null));
-        } catch (ExecutionException | InterruptedException e) {
+        }
+        catch(ExecutionException | InterruptedException e){
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(new ApiResponse<>(false, "Error creating user.", null, e));
         }
     }
 
+
     // Read User (GET)
-    @GetMapping(value = "/{user_id}", produces = Utility.DEFAULT_MEDIA_TYPE)
-    public ResponseEntity<ApiResponse<Users>> getUser(@PathVariable(name = "user_id") String id) {
+    @GetMapping(value = "/{userId}", produces = Utility.DEFAULT_MEDIA_TYPE)
+    public ResponseEntity<ApiResponse<Users>> getUser(@PathVariable(name = "userId") String id) {
         try {
             Users user = usersService.getUser(id);
             return user != null
@@ -51,10 +55,8 @@ public class UsersController {
     }
 
     // Update User (PUT)
-    @PutMapping(path = "/{user_id}", consumes = Utility.DEFAULT_MEDIA_TYPE, produces = Utility.DEFAULT_MEDIA_TYPE)
-    public ResponseEntity<ApiResponse<WriteResult>> updateUser(
-            @PathVariable(name = "user_id") String id,
-            @RequestBody Map<String, Object> updateValues) {
+    @PutMapping(path="/{user_id}", produces = Utility.DEFAULT_MEDIA_TYPE, consumes =  Utility.DEFAULT_MEDIA_TYPE)
+    public ResponseEntity<ApiResponse<WriteResult>> updateUser(@PathVariable(name="user_id") String id,@RequestBody Map<String,Object> updateValues){
         try {
             WriteResult result = usersService.updateUser(id, updateValues);
             return ResponseEntity.status(HttpStatus.OK)
@@ -63,9 +65,9 @@ public class UsersController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(new ApiResponse<>(false, "Error updating user.", null, e));
         }
+
     }
 
-    // Delete User (DELETE)
     @DeleteMapping("/{user_id}")
     public ResponseEntity<ApiResponse<String>> deleteUser(@PathVariable(name = "user_id") String id) {
         try {
