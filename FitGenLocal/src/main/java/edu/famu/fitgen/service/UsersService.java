@@ -25,7 +25,7 @@ public class UsersService {
     private Users documentToUser(DocumentSnapshot document) throws ParseException {
         if (document.exists()) {
             return new Users(document.getId(),document.getString("firstName"), document.getString("lastName"),
-                    document.getString("email"),document.getLong("age"),document.getTimestamp("createdAt"),
+                    document.getString("email"), document.getTimestamp("createdAt"),
                     document.getTimestamp("updatedAt"), document.getLong("age"), document.getLong("height")
             ); // Make sure this is in the order of the users model
         }
