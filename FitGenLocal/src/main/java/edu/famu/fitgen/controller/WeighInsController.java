@@ -1,4 +1,4 @@
-/*package edu.famu.fitgen.controller;
+package edu.famu.fitgen.controller;
 
 import com.google.cloud.firestore.WriteResult;
 import edu.famu.fitgen.model.WeighIns;
@@ -75,4 +75,4 @@ public class WeighInsController {
                     .body(new ApiResponse<>(false, "Error deleting weigh-in.", null, e));
         }
     }
-}*/
+}

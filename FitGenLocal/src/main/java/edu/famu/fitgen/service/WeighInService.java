@@ -1,4 +1,4 @@
-/* edu.famu.fitgen.service;
+package edu.famu.fitgen.service;
 
 import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.*;
@@ -11,7 +11,9 @@ import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 import edu.famu.fitgen.model.WeighIns;
+import org.springframework.stereotype.Service;
 
+@Service
 public class WeighInService {
     private Firestore firestore;
 
@@ -66,4 +68,4 @@ public class WeighInService {
         ApiFuture<WriteResult> writeResult = weighInDoc.delete();
         return writeResult.get();
     }
-}*/
+}

@@ -1,10 +1,10 @@
 package edu.famu.fitgen.service;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+// import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.*;
 import com.google.firebase.cloud.FirestoreClient;
-import org.springframework.beans.factory.annotation.Autowired;
+// import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.text.ParseException;
@@ -25,8 +25,8 @@ public class UsersService {
     private Users documentToUser(DocumentSnapshot document) throws ParseException {
         if (document.exists()) {
             return new Users(document.getId(),document.getString("firstName"), document.getString("lastName"),
-                    document.getString("email"),document.getLong("age"),document.getTimestamp("createdAt"),
-                    document.getTimestamp("updatedAt"), document.getLong("age"), document.getLong("height")
+                    document.getString("email"), document.getTimestamp("createdAt"),
+                    document.getTimestamp("updatedAt"), Math.toIntExact(document.getLong("age")), Math.toIntExact(document.getLong("height"))
             ); // Make sure this is in the order of the users model
         }
         return null;
@@ -42,11 +42,11 @@ public class UsersService {
 
 
     // Read User by ID
-    public Users getUser(String id) throws ExecutionException, InterruptedException {
+    public Users getUser(String id) throws ExecutionException, InterruptedException, ParseException {
         DocumentReference userDoc = firestore.collection("Users").document(id);
         DocumentSnapshot document = userDoc.get().get();
         if (document.exists()) {
-            return document.toObject(Users.class);
+            return documentToUser(document);
         }
         return null;
     }

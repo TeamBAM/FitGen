@@ -21,7 +21,7 @@ public class AWeighIns {
     private int bodyFat;
 
     private Timestamp weighDate;
-    public void setWeighDate(String weighDate) throws TextFormat.ParseException, ParseException {
+    public void setWeighDate(String weighDate) throws ParseException {
         this.weighDate = Timestamp.fromProto(Timestamps.parse(weighDate));
     }
 }
