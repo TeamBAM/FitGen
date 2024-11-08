@@ -6,22 +6,28 @@ import com.google.cloud.firestore.*;
 import com.google.firebase.cloud.FirestoreClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.text.ParseException;
 import java.util.*;
 import java.util.concurrent.ExecutionException;
 import edu.famu.fitgen.model.Users;
 
 @Service
-@JsonSerialize
 public class UsersService {
 
     private Firestore firestore;
+
+    private static final String USERS_COLLECTION = "Users";
     public UsersService() {
         this.firestore = FirestoreClient.getFirestore();
     }
 
-    public Users documentSnapshotToUser(DocumentSnapshot document) {
+    private Users documentToUser(DocumentSnapshot document) throws ParseException {
         if (document.exists()) {
-            return document.toObject(Users.class);
+            return new Users(document.getId(),document.getString("firstName"), document.getString("lastName"),
+                    document.getString("email"),document.getLong("age"),document.getTimestamp("createdAt"),
+                    document.getTimestamp("updatedAt"), document.getLong("age"), document.getLong("height")
+            ); // Make sure this is in the order of the users model
         }
         return null;
     }
