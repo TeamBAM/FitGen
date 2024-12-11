@@ -17,7 +17,7 @@ public class FitGenApplication {
         ClassLoader loader = FitGenApplication.class.getClassLoader();
 
         //opens the file stored in resources
-        File file = new File(loader.getResource("Correct_Service_Key-11-06-24.json").getFile());
+        File file = new File(loader.getResource("serviceAccountKey.json").getFile());
         //reads the data from the file
         FileInputStream serviceAccount = new FileInputStream(file.getAbsolutePath());
 

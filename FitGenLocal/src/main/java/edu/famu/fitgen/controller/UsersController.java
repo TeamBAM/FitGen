@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.text.ParseException;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
@@ -26,7 +28,7 @@ public class UsersController {
         this.usersService = usersService;
     }
 
-    @PostMapping("/{userId}")
+    @PostMapping("/")
     public ResponseEntity<ApiResponse<String>> addUser(@RequestBody Users user) {
         try{
             String id = usersService.createUser(user);
@@ -48,7 +50,7 @@ public class UsersController {
             return user != null
                     ? ResponseEntity.status(HttpStatus.OK).body(new ApiResponse<>(true, "User retrieved successfully.", user, null))
                     : ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ApiResponse<>(false, "User not found.", null, null));
-        } catch (ExecutionException | InterruptedException e) {
+        } catch (ExecutionException | InterruptedException | ParseException e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(new ApiResponse<>(false, "Error retrieving user.", null, e));
         }

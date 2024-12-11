@@ -20,12 +20,12 @@ public class Users {
     private String lastName;
     private String email;
 
-    private Timestamp createdAt ;
-    private Timestamp updatedAt;
+    private @Nullable Timestamp createdAt;
+    private @Nullable Timestamp updatedAt;
 
 
-    private int age;
-    private int height;
+    private @Nullable int age;
+    private @Nullable int height;
 
     public Users(String id, String firstName, String lastName, String email, Timestamp createdAt, Timestamp updatedAt, Long age, Long height) {
     }
