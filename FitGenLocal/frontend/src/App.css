@@ -1,3 +1,273 @@
+.exercise-log-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.exercise-log-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.exercise-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.exercise-form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.exercise-form button {
+  padding: 12px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.exercise-form button:hover {
+  background-color: #0056b3;
+}
+
+.exercise-log-list {
+  margin-top: 40px;
+}
+
+.exercise-log-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.exercise-log-list th, .exercise-log-list td {
+  padding: 8px 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.exercise-log-list th {
+  background-color: #007bff;
+  color: white;
+}
+
+.exercise-log-list tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+.progress-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.progress-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.progress-summary {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.weigh-ins {
+  margin-top: 30px;
+}
+
+.weigh-ins table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.weigh-ins th, .weigh-ins td {
+  padding: 8px 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.weigh-ins th {
+  background-color: #007bff;
+  color: white;
+}
+
+.weigh-ins tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 18px;
+}
+
+
+.fitness-plan-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fitness-plan-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.fitness-plan-summary {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.fitness-plan-summary h3 {
+  margin-top: 0;
+}
+
+.fitness-plan-summary p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.fitness-plan-summary a {
+  margin-top: 10px;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.fitness-plan-summary a:hover {
+  background-color: #0056b3;
+}
+
+.weekly-plan {
+  margin-top: 30px;
+}
+
+.week {
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.week h4 {
+  margin-top: 0;
+}
+
+.week ul {
+  padding-left: 20px;
+}
+
+.week li {
+  font-size: 16px;
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 18px;
+}
+
+.profile-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-form .form-group {
+  margin-bottom: 15px;
+}
+
+.profile-form .form-control {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.profile-info p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.profile-info button {
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.btn-primary {
+  width: 100%;
+}
+
+.btn-secondary {
+  width: 100%;
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+
+
+.signup-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signup-form .form-group {
+  margin-bottom: 15px;
+}
+
+.signup-form .form-control {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.signup-form button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
 body {
   background-color: #121212; /* Very dark grey, almost black */
   font-family: 'Open Sans', sans-serif;
