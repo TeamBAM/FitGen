@@ -1,3 +1,76 @@
+body {
+  background-color: #121212; /* Very dark grey, almost black */
+  font-family: 'Open Sans', sans-serif;
+  color: #FFFFFF; /* White font for the title */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  color: #B0B0B0; /* Light grey for labels */
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input {
+  width: calc(100% - 40px);
+  margin: 10px 20px;
+  padding: 10px;
+  border: 1px solid #B0B0B0; /* Light grey outline */
+  border-radius: 5px;
+  background: #1E1E1E;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+button {
+  width: calc(100% - 40px);
+  margin: 20px;
+  padding: 10px;
+  background-color: #06402B;
+  color: #FFFFFF;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #076B45;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-left: 20px;
+}
+
+.eye-icon {
+  position: relative;
+  margin-left: -30px;
+  cursor: pointer;
+  top: -28px;
+  float: right;
+  color: #B0B0B0;
+}
+
 .App {
   text-align: center;
 }
@@ -36,3 +109,5 @@
     transform: rotate(360deg);
   }
 }
+
+
