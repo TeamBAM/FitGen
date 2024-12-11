@@ -31,3 +31,5 @@ build/
 
 ### VS Code ###
 .vscode/
+src/resources/serviceAccountKey.json
+frontend/node_modules

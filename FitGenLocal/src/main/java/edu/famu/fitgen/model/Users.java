@@ -20,8 +20,8 @@ public class Users {
     private String lastName;
     private String email;
 
-    private Timestamp createdAt ;
-    private Timestamp updatedAt;
+    private @Nullable Timestamp createdAt;
+    private @Nullable Timestamp updatedAt;
 
 
     private int age;
