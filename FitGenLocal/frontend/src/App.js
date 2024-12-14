@@ -4,7 +4,7 @@ import SignUp from './pages/SignUp';
 import ExerciseLog from './pages/ExerciseLog';
 import FitnessPlan from './pages/FitnessPlan';
 import Profile from './pages/Profile';
-// import Progress from './pages/Progress';
+import MapPage from './pages/MapPage'; // Import MapPage
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
                             <li><Link to="/fitness-plan">Fitness Plan</Link></li>
                             <li><Link to="/exercise-log">Exercise Log</Link></li>
                             <li><Link to="/profile">Profile</Link></li>
+                            <li><Link to="/map">Map</Link></li> {/* Add Map Link */}
                         </ul>
                     </nav>
 
@@ -32,6 +33,7 @@ function App() {
                         <Route path="/fitness-plan" element={<FitnessPlan />} />
                         <Route path="/exercise-log" element={<ExerciseLog />} />
                         <Route path="/profile" element={<Profile />} />
+                        <Route path="/map" element={<MapPage />} /> {/* Add Map Route */}
                         {/* Default route (Home or Landing page) */}
                         <Route path="/" element={<SignUp />} />
                     </Routes>
